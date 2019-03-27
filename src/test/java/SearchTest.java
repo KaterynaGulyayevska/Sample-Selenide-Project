@@ -24,7 +24,7 @@ public class SearchTest {
         open("http://google.com");
         $(By.name("q")).val("selenide");
         $(By.name("q")).pressEnter();
-        $$("#ires .g").shouldHave(size(10));
+       // $$("#ires .g").shouldHave(size(10));
         $("#ires .g").shouldHave(text("selenide.org"));
     }
 }

@@ -1,22 +1,34 @@
 package Pages;
 
 import org.openqa.selenium.By;
+
+import java.net.URL;
+
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
+
+// добавить приватный драйвер
+// find element - приватные классы
+// методы - публичные
 
 
 public class LoginPageMaguru {
 
-    public void enterLogin (String login){
-        $(By.cssSelector("#email")).sendKeys(login);
+
+    public LoginPageMaguru enterLogin (String name){
+        $(By.cssSelector("#email")).sendKeys(name);
+        return this;
     }
 
-    public void enterPassword (String password){
-        $(By.cssSelector("#password")).sendKeys(password);
+    public LoginPageMaguru enterPassword (String pass){
+        $(By.cssSelector("#password")).sendKeys(pass);
+        return this;
     }
 
     public void clickLogin(){
-        $(By.cssSelector("#login-dialog-submit-btn > font > font")).click();
+        $(By.xpath("//*[@type='submit']")).click();
     }
+
 
 
 }

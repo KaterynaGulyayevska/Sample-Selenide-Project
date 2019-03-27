@@ -1,0 +1,15 @@
+<suite name = "First test suite">
+
+    <test name ="My first test with groups">
+
+
+        <classes>
+
+            <class name="TestNG"/>
+            <class name ="maguru.dev.dk.DataProvider"/>
+
+        </classes>
+
+    </test>
+
+</suite>
