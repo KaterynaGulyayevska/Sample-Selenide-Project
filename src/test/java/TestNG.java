@@ -1,7 +1,5 @@
-import Pages.DashboardPage;
 import Pages.LoginPageMaguru;
 import com.codeborne.selenide.Configuration;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -15,7 +13,6 @@ public class TestNG {
 
         return new Object[][]{
                 {"testmaguru9", "123123"}
-
         };
     }
 
@@ -26,7 +23,6 @@ public class TestNG {
     @BeforeTest
     public void beforeTest() {
         System.out.println("Here should be precondition and/or settings of driver connection");
-
         Configuration.remote = "http://localhost:4444/wd/hub";
         Configuration.browser = "chrome";
     }
@@ -51,11 +47,4 @@ public class TestNG {
     } // - нужно добавить анатацию или сделать в Main */
 
 
-
-
-    @AfterTest
-    void afterTest() {
-        System.out.println("Here should be postcondition and/or closing driver");
-
-    }
 }

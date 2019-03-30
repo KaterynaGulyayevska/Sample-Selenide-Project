@@ -1,12 +1,22 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name = "First test suite">
 
-    <test name ="My first test with groups">
+    <listeners>
+
+    </listeners>
+
+    <test name="Login">
 
 
+        <parameter name ="browser" value ="chrome"/>
+        <parameter name="url" value="http://go.dev.maguru.dk/#/login"/>
+        
         <classes>
 
+            <class name="ParameterTestJava"/>
             <class name="TestNG"/>
-            <class name ="maguru.dev.dk.DataProvider"/>
+            <class name="LinguaLeo"/>
+
 
         </classes>
 
